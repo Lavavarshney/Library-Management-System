@@ -33,5 +33,5 @@ const bookSchema = new mongoose.Schema({
     ref: 'Author', // Reference to Author model for WRITES relationship
   }],
 });
-
+bookSchema.index({ title: 'text' });
 module.exports = mongoose.model('Book', bookSchema);

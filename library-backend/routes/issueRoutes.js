@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
     const populatedIssues = await Promise.all(issues.map(async (issue) => {
       const student = await Student.findOne({ student_id: issue.student_id });
       const book = await Book.findOne({ book_id: issue.book_id });
-      return {
+          return {
         ...issue._doc,
         student,
         book,
