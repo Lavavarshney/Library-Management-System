@@ -12,7 +12,7 @@ import {
   Search, 
   Bell,
   Clock,
-  BookMarked
+  BookMarked,PenTool
 } from 'lucide-react';
 
 function Navbar() {
@@ -77,6 +77,10 @@ function Navbar() {
               <Users size={18} className="mr-1" />
               <span>Students</span>
             </Link>
+            <Link to="/authors" className="text-gray-300 hover:text-white transition-colors flex items-center">
+              <PenTool size={18} className="mr-1" />
+              <span>Authors</span>
+            </Link>
             <Link to="/issues" className="text-gray-300 hover:text-white transition-colors flex items-center">
               <Clock size={18} className="mr-1" />
               <span>Issues</span>
@@ -99,8 +103,8 @@ function Navbar() {
               </span>
             </button>
 
-            {/* Settings Link (Desktop) */}
-            
+            {/* Link (Desktop) */}
+          
 
             {/* Profile (Desktop) */}
             <Link 
@@ -191,14 +195,7 @@ function Navbar() {
               <Clock size={18} className="mr-2" />
               <span>Issues</span>
             </Link>
-            <Link to="/dashboard" className="text-gray-300 hover:text-white transition-colors block py-2 px-3 rounded-lg hover:bg-gray-700 flex items-center">
-              <BarChart2 size={18} className="mr-2" />
-              <span>Dashboard</span>
-            </Link>
-            <Link to="/settings" className="text-gray-300 hover:text-white transition-colors block py-2 px-3 rounded-lg hover:bg-gray-700 flex items-center">
-              <Settings size={18} className="mr-2" />
-              <span>Settings</span>
-            </Link>
+
             <div className="border-t border-gray-600 pt-2 mt-2">
               <div className="flex items-center justify-between py-2 px-3">
                 <div className="flex items-center">
